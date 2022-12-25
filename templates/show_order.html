@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h4>Order No:</h4>
+	<br/>
+	{% for i in orders %}
+	&nbsp&nbsp
+	<button><a href="{% url 'lead_time' i.id %}">{{i.order_no}}</a></button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<br>
+	<br>
+	{% endfor %}
+
+{% endblock %}

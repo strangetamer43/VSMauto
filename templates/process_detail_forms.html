@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Processes</h3>
+{% for i in process %}
+{{i}}<br/>
+{% endfor %}
+<form method='POST'>
+	{% csrf_token %}
+	Process_Name:<input type='text' name='process' />
+	<input type='Submit' value='Submit'/>
+</form>
+{% endblock %}

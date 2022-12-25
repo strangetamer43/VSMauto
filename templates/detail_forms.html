@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method='POST'>
+	{% csrf_token %}
+	Machine Number:<input type='text' name='machine'/><br/>
+	ExcelSheet id:<input type='text' name='excel'/><br/>
+	Target:<input type='number' name='target'/><br/>
+	Shifts:<input type='number' name='shifts'/><br/>
+	<input type='Submit' value='Submit'/>
+</form>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method='post'>
+    {% csrf_token %}
+   From :<input type='date'name='from' />
+   To :<input type='date' name='to' />
+   <input type="submit" value="search"> 
+</form>
+{% if product %}
+
+
+
+<h4>'no_of_pro':{{p}}<br></h4> 
+<h4>'total_weight/output':{{w}}<br></h4>
+<h4>'target':{{t}}<br></h4>
+
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Machine</th>
+		<th>Process</th>
+		<th>Product/order</th>
+		<th>Weight(output)</th>
+
+    </tr>
+    {% for i in product %}
+    <tr> 
+        <td>{{ i.date }}</td>
+        <td>{{ i.machine }}</td>
+		<td>{{ i.process }}</td>
+		<td>{{ i.order }}</td>
+		<td>{{ i.weight }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+{% endif %}
+
+
+{% endblock %}

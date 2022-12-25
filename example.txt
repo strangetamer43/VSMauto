@@ -1,0 +1,5 @@
+//for lead time
+start_date = datetime.strptime(start_date, '%m/%d/%Y')
+end_date = datetime.strptime(end_date, '%m/%d/%Y')
+
+lead_time = end_date - start_date

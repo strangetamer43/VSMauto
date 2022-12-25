@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            {% for header in data.values.0 %}
+                <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data.values %}
+            <tr>
+                {% for cell in row %}
+                    <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+    <body>
+        <h4> <a href="https://docs.google.com/spreadsheets/d/1PK9LoJw_NbuQ122tQfgRHYgbtacrtN_cpa3Bakce70Q/edit?usp=sharing">Google Sheet</a> </h4>
+    </body>
+</table>

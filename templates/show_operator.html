@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h4>Operator ID's:</h4>
+	<br/>
+	{% for i in operators %}
+	&nbsp&nbsp
+	<button><a href="{% url 'operator_analysis' i.operator_no %}">{{i.operator_no}}</a></button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<br>
+	<br>
+	{% endfor %}
+
+{% endblock %}

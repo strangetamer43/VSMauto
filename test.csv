@@ -1,0 +1,7 @@
+machine,process,starttime,endtime,weight
+1,Loading,10:48,10:55,100
+1,running,09:48,09:50,100
+1,Clasping,11:48,11:55,100
+2,Loading,10:48,10:55,200
+2,running,09:48,09:59,200
+2,Clasping,11:48,11:55,200

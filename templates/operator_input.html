@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method='post'>
+    {% csrf_token %}
+   From :<input type='date'name='from' />
+   To :<input type='date' name='to' />
+   <input type="submit" value="search"> 
+</form>
+
+{% endblock %}

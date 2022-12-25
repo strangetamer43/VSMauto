@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h4>MACHINES:</h4>
+	<br/>
+	{% for i in machines %}
+	&nbsp&nbsp
+	<button><a href="{% url 'process_details' i.id %}">{{i.machine_name}}</a></button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button><a href="{% url 'target' i.id %}">Target</a></button>
+	<button><a href="{% url 'show_data' i.id %}">Excel Sheet</a></button>
+	<button><a href="{% url 'analysis' i.id %}">Analysis</a></button>
+	<br>
+	<br>
+	{% endfor %}
+
+{% endblock %}

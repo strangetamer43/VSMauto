@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method='POST'>
+	{% csrf_token %}
+	Shifts:<input type='number' name='shifts' value={{shifts}} /><br>
+    Target:<input type='text' name='target' value={{target}} /><br>
+
+	<input type='Submit' value='Submit'/>
+</form>
+{% endblock %}
